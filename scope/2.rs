@@ -1,5 +1,4 @@
 
-// Fix the error with the use of define_x
 fn main() {
     define_x()
 }
