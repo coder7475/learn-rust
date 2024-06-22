@@ -8,4 +8,5 @@ fn main() {
     let _y = "I can also be bound to text!"; 
 
     println!("Success!");
+    println!(_y)
 }
