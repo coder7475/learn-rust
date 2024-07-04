@@ -10,21 +10,16 @@ enum Transmission { Manual, SemiAuto, Automatic }
 // Declare enum for Car age
 enum Age { New, Used }
 
-
 // Get the car quality by testing the value of the input argument
 // - miles (u32)
 // Return tuple with car age ("New" or "Used") and mileage
 fn car_quality (miles: u32) -> (Age, u32) {
-
-    // ("Add conditional expression: If car has accumulated miles, return tuple for Used car with current mileage");
     if miles > 0 {
         return (Age::Used, miles);
     }
-    // ("Return tuple for New car with zero miles");
     return (Age::New, 0);
 }
 
-//////////////////////////////////////////////////
 
 // Build a new "Car" using the values of four input arguments
 // - color (String)
@@ -38,10 +33,18 @@ fn car_factory(color: String, motor: Transmission, roof: bool, miles: u32) -> Ca
     // Show details about car order
     // - Check if order is for Used or New car, then check the roof type 
     // - Print details for New or Used car based on roof type
-    todo!("Add conditional expression: If car is Used age, then check roof type");
-        todo!("Add conditional expression: If roof is a hard top, print details");
+    // todo!("Add conditional expression: If car is Used age, then check roof type");
+    if miles > 0 {
+        // todo!("Add conditional expression: If roof is a hard top, print details");
+        if roof {
             // Call the `println!` macro to show the car order details
             println!("Prepare a used car: {:?}, {}, Hard top, {} miles\n", motor, color, miles);  
+        } else {
+            println!("Prepare a used car: {:?}, {}, Hard top, {} miles\n", motor, color, miles);
+        }
+    } else {
+        println!("Buila a new car: {:?}, {}, Hard top, {} miles\n", motor, color, miles);
+    }
 
     // Create a new "Car" instance as requested
     // - Bind first three fields to values of input arguments
