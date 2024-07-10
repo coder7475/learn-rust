@@ -10,7 +10,13 @@ fn main() {
   }
 
   let a_number = Some(7);
+  // match one condition
   match a_number {
-    Some(7) => println!("This is a lucky number")
+    Some(7) => println!("This is a lucky number"),
+    _ => {}
+  }
+  // condense above
+  if let Some(7) = a_number {
+    println!("This is condensed lucky number")
   }
 }
