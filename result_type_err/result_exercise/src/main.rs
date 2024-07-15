@@ -19,14 +19,15 @@ fn read_file_contents(path: PathBuf) -> Result<String, Error> {
     // Read file contents into `String` variable with `read_to_string`
     // ---------------------------------
     // Success path is already filled in
-    // TODO #2: Return from function early if there's an error
+    // ?DONE #2: Return from function early if there's an error
     match file.read_to_string(&mut string) {
         Ok(_) => (),
-        Err(io_error) => todo!("Return from function early if there's an error")
+        Err(io_error) => return  Err(io_error)
     };
 
-    // TODO #3: Return `string` variable as expected by function signature
-    todo!("Return `string` variable")
+    // ? DONE #3: Return `string` variable as expected by function signature
+    // todo!("Return `string` variable")
+    Ok(string)
 }
 
 fn main() {
