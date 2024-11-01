@@ -1,4 +1,18 @@
-# learn-rust
+# Learn Rust
+
+Full The Rust Programming Language Book
+
+## Rules of Ownership
+
+1. Each value in Rust has a variable that's called its owner.
+2. There can only be one owner at a time.
+3. When the owner goes out of scope, the value will be dropped.
+
+## Rules of References
+
+1. References are immutable by default,Rust also provides a mutable reference.
+2. At any given time, you can have either one mutable reference or any number of immutable references.
+3. References must always be valid.
 
 ## Data Race
 
